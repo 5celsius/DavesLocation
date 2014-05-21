@@ -25,7 +25,7 @@ func init() {
 func handler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	loc := getDaveLoc()
-	fmt.Fprintf(w, "{\"lat\": %f, \"lon\" : %f,\"heading\": %d}", loc.coord.lat, loc.coord.lon, loc.heading)
+	fmt.Fprintf(w, "{\"lat\": %f, \"lon\" : %f,\"heading\": %d, \"id\" : 5}", loc.coord.lat, loc.coord.lon, loc.heading)
 }
 
 func getCurrentCoord(start DaveCoord, finish DaveCoord, percent float32) DaveCoord {
